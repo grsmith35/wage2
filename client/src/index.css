@@ -1,0 +1,332 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input, textarea:focus {
+  border: 1px solid black;
+}
+
+.jobinput {
+  border: 1px solid black;
+
+}
+
+.rotate-graph {
+  transform: rotate(-90deg);
+}
+
+.results-border {
+  border: 1px solid #2b4870;
+  border-radius: 7px;
+}
+
+.sticky-bottom {
+  position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2.5rem;    
+}
+
+.panel-heading {
+  background-color: #2b4870;
+  color: white;
+}
+
+.justify-end {
+  align-items: flex-end;
+  float: right;
+}
+
+.panel-body {
+  color: #2b4870;
+}
+
+.requires-attention {
+  color: rgb(242, 92, 64);
+  font-weight: bolder;
+}
+
+.requires-attention:hover {
+  border-bottom: rgb(242, 92, 64) 1px solid;
+}
+
+.job-view-modal {
+  max-width: 2000px;
+}
+
+.delete-x {
+  color: rgb(242, 92, 64);
+}
+
+.delete-x-header {
+  color: rgb(242, 92, 64);
+}
+
+.delete-x:hover {
+  transform: rotate(90deg);
+  color: red;
+}
+
+.verticallink {
+  border-left: 2px solid black;
+  height: 90%;
+}
+
+.bg-color-lightorange {
+  background-color: rgb(242, 92, 64);
+  /* border: #2b4870 solid 1px; */
+}
+
+.bg-main-window {
+  background-color: white;
+}
+
+.progress {
+  color: #2b4870;
+  border-radius: 0%;
+  background-color: white;
+
+}
+
+.logo-config {
+  height: 200px;
+}
+
+.color-lightblue {
+  color: rgb(56, 186, 221);
+}
+
+.pay-row {
+  border: #2b4870 .5px solid;
+  border-radius: 3px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+}
+
+.pay-row:hover {
+  border: rgb(242, 92, 64) .5px solid;
+}
+
+.nav-fill {
+  background-color: #2b4870;
+}
+
+.btn-success {
+  background-color: #2b4870;
+  color: rgb(242, 92, 64);
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #2b4870;
+  color: rgb(242, 92, 64);
+  border: rgb(242, 92, 64) 2px solid;
+}
+
+.btn-outline-warning {
+  border: #2b4870 1px solid;
+  color: #2b4870;
+  margin: 3px;
+  background-color: rgb(242, 92, 64);
+}
+
+.auto-border {
+  border: #2b4870 1px solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+html {
+  height: 100%;
+}
+
+.body-content {
+  min-height: 75vh;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.top {
+  min-height: 20vh;
+}
+
+.push {
+  min-height: 10vh;
+  position: absolute;
+  left: 0; right: 0;bottom: 0;
+  height: 50px;
+}
+
+.contact-us:hover {
+  font-size: large;
+}
+
+.nav-item {
+  font-size: large;
+}
+
+.card-title {
+  font-weight: bolder;
+  margin-top: 2;
+  color: #2b4870;
+}
+
+.btn-danger {
+  background-color: rgb(242, 92, 64);
+  color: #2b4870;
+  font-weight: bold;
+  border: none;
+}
+
+.navbar {
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: rgb(242, 92, 64);
+  color: #2b4870;
+  font-weight: bolder;
+  border: #2b4870 solid 2px;
+}
+
+.nav-color {
+  background-color: rgb(242, 92, 64);
+  background-image: linear-gradient(rgb(242, 92, 64), white);
+}
+
+.delete-button {
+  border: none;
+  background-color: none;
+}
+
+/* .container {
+  height: 100%;
+} */
+
+.nav-row {
+  width: 100%;
+  display: inline-block;
+  zoom: 1;
+  width: 50%;
+  text-align: center;
+}
+
+.nav-link {
+  color: #2b4870;
+  font-family: Raleway;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid #2b4870;
+}
+
+.nav-column {
+  float: left;
+  /* width: 20%; */
+  background-color: rgba(242,92,64,.3);
+  border-right: #2b4870 1px solid;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-close {
+  border: none;
+  background-color: white;
+}
+
+/* .row.after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+/* #fcfffe neon whitish
+#0e3aff neon blue
+font-weight: bold;*/
+.name-font {
+  font-family: Raleway;
+  color: #2b4870;
+  text-shadow: 2px 2px 6px rgba(255,255,255,1);
+  font-size: 65px;
+  font-weight: 700;
+  margin-left: 5px;
+  padding-top: 15px
+}
+
+.bg-color-blue {
+  background-color: rgba(50, 50, 248, .75);
+}
+
+.bg-color-footer {
+  background-color: rgba(43, 72, 112, 1);
+}
+
+.link-font {
+  color:rgb(99, 96, 96)
+}
+
+.headerborder {
+  border-bottom: 2px solid black;
+}
+
+.footerborder {
+  border-top: 2px solid black;
+}
+
+.linkcards {
+  border: 2px solid black;
+}
+
+.imageborder {
+  border-bottom: 2px solid black;
+  padding: 2px 1px;
+
+}
+
+.deletebutton {
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: rgba(2, 0, 0, 0.6);
+  margin: 3px;
+  margin-left: 15px;
+}
+
+.deletebutton:hover {
+  border: 3px solid black;
+  background-color: red;
+}
+
+.linkcards:hover {
+  background-color: azure;
+  color: black;
+  transform: scale(1.08);
+  box-shadow: 2px blue;
+  text-decoration: none;
+}
+
+.linktext {
+  text-decoration: none;
+}
+
+.wrongfile {
+  color: rgb(175, 1, 1);
+  font-size: larger;
+  font-weight: bolder;
+  border: 1px solid rgb(175, 1, 1);
+}
+
+@media screen and (max-width: 768){
+  .input {
+      margin-bottom: 3;
+  }
+}
