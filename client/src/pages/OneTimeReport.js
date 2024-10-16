@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReportForm from '../Components/ReportForm';
+import Login from './Login';
 import { useLazyQuery } from '@apollo/client';
 import { QUERY_JOBS } from '../utils/queries';
 import auth from '../utils/auth';
@@ -38,7 +39,7 @@ export default function OneTimeReport() {
         )
     } else {
         return (
-            <div className='h4 pl-5'>Must be logged in to use this feature</div>
+            <Login />
         )
     }
 };

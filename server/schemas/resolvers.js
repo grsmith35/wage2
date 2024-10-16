@@ -65,8 +65,6 @@ const resolvers = {
             const confEmail = "logan@wenlocktalent.com";
             const confPassword = "Bagodix1!";
 
-            console.log(checkEmail, email, password, confPassword)
-            console.log(checkEmail === confEmail, password === confPassword)
             if(checkEmail !== confEmail || password !== confPassword) {
                 throw new AuthenticationError('Incorrect Credentials');
             }
