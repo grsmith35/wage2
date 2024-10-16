@@ -2,7 +2,6 @@ import './App.css';
 import Login from './pages/Login';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import Home from './pages/Home';
 import OneTimeReport from './pages/OneTimeReport';
 import auth from './utils/auth';
 import { ApolloClient,
@@ -12,12 +11,9 @@ import { ApolloClient,
   import { setContext } from '@apollo/client/link/context';
   import { Routes, Route, Outlet } from 'react-router-dom';
 
-// const httpLink = createHttpLink({
-//   uri: process.env.REACT_APP_SERVER_URL || "http://localhost:3001/graphql",
 
-// });
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000/graphql",
+  uri: process.env.REACT_APP_SERVER_URL || "http://localhost:3001/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {

@@ -62,8 +62,8 @@ const resolvers = {
     Mutation: {
         login: async (parent, { email, password }) => {
             const checkEmail = email.toLowerCase();
-            const confEmail = "logan@wenlocktalent.com";
-            const confPassword = "Bagodix1!";
+            const confEmail = process.env.REACT_APP_CLIENT_LOGIN
+            const confPassword = process.env.REACT_APP_CLIENT_PASS
 
             if(checkEmail !== confEmail || password !== confPassword) {
                 throw new AuthenticationError('Incorrect Credentials');
