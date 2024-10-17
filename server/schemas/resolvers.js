@@ -2,6 +2,7 @@ const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 const axios = require('axios').default;
 const { DateTime, Interval } = require("luxon");
+require('dotenv').config()
 
 const resolvers = {
     Query: {
@@ -64,7 +65,8 @@ const resolvers = {
             const checkEmail = email.toLowerCase();
             const confEmail = process.env.REACT_APP_CLIENT_LOGIN
             const confPassword = process.env.REACT_APP_CLIENT_PASS
-
+            console.log(confEmail, confPassword);
+            console.log(checkEmail === confEmail, confPassword === password)
             if(checkEmail !== confEmail || password !== confPassword) {
                 throw new AuthenticationError('Incorrect Credentials');
             }
