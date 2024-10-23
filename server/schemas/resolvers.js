@@ -23,11 +23,11 @@ const resolvers = {
               };
               
               try {
-                  const response = await axios.request(options);
-                  const data = response.data.data.map((e) => { 
+                    const response = await axios.request(options);
+                    const data = response.data.data.map((e) => { 
                     const date1 = DateTime.now();
-                    const date2 = !!e?.job_post_at_datetime && DateTime?.fromISO(e?.job_post_at_datetime);
-                    const diff = !! date2 && Interval?.fromDateTimes(date2, date1);
+                    const date2 = new Date(e?.job_posted_at_timestamp * 1000);
+                    const diff = !!date2 && Interval?.fromDateTimes(date2, date1);
 
                     return {
                     Company: e.employer_name,
@@ -65,8 +65,6 @@ const resolvers = {
             const checkEmail = email.toLowerCase();
             const confEmail = process.env.REACT_APP_CLIENT_LOGIN
             const confPassword = process.env.REACT_APP_CLIENT_PASS
-            console.log(confEmail, confPassword);
-            console.log(checkEmail === confEmail, confPassword === password)
             if(checkEmail !== confEmail || password !== confPassword) {
                 throw new AuthenticationError('Incorrect Credentials');
             }

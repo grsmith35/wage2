@@ -17,7 +17,6 @@ export default function OneTimeReport() {
         });
         if(results) {
             setRunningReport(false);
-            console.log(results)
             exportPayReport(results.data.getJobs, args.title)
         }
     };
