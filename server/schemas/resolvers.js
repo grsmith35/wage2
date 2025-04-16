@@ -51,6 +51,12 @@ const resolvers = {
                     const date2 = new Date(e.date_posted);
                     const diff = !!date2 && Interval?.fromDateTimes(date2, date1);
 
+                    const getDates = () => {
+                      if(!!diff && !!date2) {
+                        return diff?.length('days')
+                      } return 'No Date';
+                    }
+
                     return {
                         Company: e.company,
                         job_id: e.id,
@@ -66,7 +72,7 @@ const resolvers = {
                         job_is_remote: e.is_remote === true ? true : false,
                         job_posted_at_timestamp: e.job_posted_at_timestamp,
                         job_post_at_datetime: e.date_posted,
-                        Days_since_posted: !!diff ? diff?.length('days') : null,
+                        Days_since_posted: getDates(),
                         City: e.location,
                         State: e.job_state,
                         Country: 'not jsearch',
@@ -108,7 +114,7 @@ const resolvers = {
                     job_salary_currency: e.job_salary_currency,
                     job_job_title: e.job_job_title,
                   }});
-                  const allData = data.concat(respData)
+                  const allData = data.concat(respData);
                   return allData.filter((e) => !excludedPublishers.includes(e.job_publisher.toLowerCase()));
               } catch (error) {
                   console.error(error);
